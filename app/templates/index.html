@@ -1,0 +1,22 @@
+<!doctype html>
+<title>sf-e8-homework</title>
+<h1>Подсчет вхождений слова python</h1>
+<form action="/">
+  <input type="text" name="address"></input>
+  <input type="submit">
+</form>
+
+<table border="1">
+  <tr>
+    <th>Адрес</th>
+    <th>Кол-во вхождений</th>
+    <th>HTTP STATUS CODE</th>
+  </tr>
+  {% for result in results %}
+    <tr>
+      <td>{{result.address}}</td>
+      <td>{{result.words_count}}</td>
+      <td>{{result.http_status_code}}</td>
+    </tr>
+  {% endfor %}
+</table>
